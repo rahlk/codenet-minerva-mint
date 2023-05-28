@@ -1,4 +1,3 @@
-Copy code
 import semmle.code.java.dataflow.TaintTracking
 import EntryPointSource
 import TransactionalInstruction
