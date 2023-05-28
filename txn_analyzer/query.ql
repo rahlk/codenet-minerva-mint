@@ -4,9 +4,6 @@ import EntryPointSource
 import TransactionalInstruction
 import TransactionFlowConfig
 
-/**
- * The main query that outputs a JSON tuple for each taint flow path from source to sink.
- */
-from Config cfg, DataFlow::PathNode source, DataFlow::PathNode sink
+from Config cfg, DataFlow::PathNode source, DataFlow::PathNode sink, DataFlow::PathGraph pathGraph
 where cfg.hasFlowPath(source, sink)
-select sink.getNode().toString(), source.getNode().toString(), source.getPath().toString()
+select sink.getNode().toString(), source.getNode().toString(), pathGraph
